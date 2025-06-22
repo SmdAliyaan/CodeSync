@@ -1,20 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom";
 import Home from './component/Home';
-import{Routes,Route} from 'react-router-dom';
-import { EditorView } from 'codemirror';
+import EditorPage from './component/EditorPage';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <>
     <Routes>
-      <Route>
-            <Route path="/" element={<Home />} />
-      {/* <Route path="/editor/:roomId" element={<EditorPage />} /> */}
-      </Route>
+     <Route path='/' element={ <Home /> } />
+     <Route path='/editor/:roomId' element={ <EditorPage /> } />
     </Routes>
     </>
   );
 }
 
 export default App;
+
